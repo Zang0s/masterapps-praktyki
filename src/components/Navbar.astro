@@ -1,0 +1,15 @@
+---
+import logo from '../../public/images/logo.svg'
+import Navigation from './Navigation.astro'
+import Login from './Login.astro'
+---
+
+<nav class="flex justify-between items-center p-4 text-stone-500">
+    <div class="flex items-center space-x-8">
+        <a href="#"><img src={logo.src} alt="Logo snap" class="h-8 w-auto mr-10"></a>
+      <Navigation />
+    </div>
+    <div>
+      <Login />
+    </div>
+</nav>

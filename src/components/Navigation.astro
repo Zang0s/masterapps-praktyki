@@ -1,0 +1,26 @@
+---
+import iconArrowDown from '../../public/images/icon-arrow-down.svg'
+import iconArrowUp from '../../public/images/icon-arrow-up.svg'
+---
+
+<nav class="inline-block">
+    <ul class="flex space-x-8">
+        <li><a href="#" id="features-toggle" class="hover:text-black flex group">Features <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg" id="features-arrow" class="h-2 w-3 ml-2 m-2 stroke-stone-500 hover:stroke-black transition-transform transform group-hover:rotate-180"><path id="arrowDown" stroke="#78716c"  stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg></a></li>
+        <li><a href="#" id="company-toggle" class="hover:text-black flex group">Company <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg" id="company-arrow" class="h-2 w-3 ml-2 m-2 stroke-stone-500 hover:stroke-black transition-transform transform group-hover:rotate-180"><path id="arrowDown" stroke="#78716c"  stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg></a></li>
+        <li><a href="#" class="hover:text-black">Careers</a></li>
+        <li><a href="#" class="hover:text-black">About</a></li>
+    </ul>
+</nav>
+
+<style>
+    #features-toggle:hover {
+        #arrowDown{
+            stroke: black;
+        }
+    }
+    #company-toggle:hover {
+        #arrowDown{
+            stroke: black;
+        }
+    }
+</style>
