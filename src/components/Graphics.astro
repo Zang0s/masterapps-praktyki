@@ -1,7 +1,9 @@
 ---
 import imageHeroDesktop from '../../public/images/image-hero-desktop.png'
+import imageHeroMobile from '../../public/images/image-hero-mobile.png'
 ---
 
-<section class="basis-2/6">
-    <img src={imageHeroDesktop.src} class=""/>
+<section class="lg:basis-2/6 order-1 lg:order-3">
+    <img src={imageHeroMobile.src}   class="block lg:hidden"/>
+    <img src={imageHeroDesktop.src} class="hidden lg:block">
 </section>

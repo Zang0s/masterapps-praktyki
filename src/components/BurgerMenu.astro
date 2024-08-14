@@ -1,0 +1,94 @@
+---
+import closeMenu from '../../public/images/icon-close-menu.svg'
+import openMenu from '../../public/images/icon-menu.svg'
+import iconTodo from '../../public/images/icon-todo.svg'
+import iconCalendar from '../../public/images/icon-calendar.svg'
+import iconReminders from '../../public/images/icon-reminders.svg'
+import iconPlanning from '../../public/images/icon-planning.svg'
+import arrowDown from '../../public/images/icon-arrow-down.svg'
+---
+
+
+<nav class="relative flex items-center justify-between p-6 lg:hidden z-50">
+    <button id="menuButton" class="lg:hidden block focus:outline-none">
+      <img src={openMenu.src} alt="Menu" />
+    </button>
+
+  
+    <div id="mobileMenu" class="fixed top-0 right-0 h-full w-3/4 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out">
+      <div class="flex justify-end p-6">
+        <button id="closeMenuButton">
+          <img src={closeMenu.src} alt="Close" />
+        </button>
+      </div>
+      <ul class="flex flex-col space-y-4 p-6">
+        <li class="group">
+          <div class="flex items-center justify-between">
+            <a href="#" class="inline-block hover:text-black">
+                <span>Features</span>
+                <img src={arrowDown.src} alt="Arrow" class="transform group-hover:rotate-180 inline-block" />
+            </a>
+          </div>
+          <ul class="mt-2 space-y-2 pl-4 hidden group-hover:block">
+            <a href="#"><li class="flex items-center hover:text-black">
+              <img src={iconTodo.src} alt="Todo" class="mr-2" />
+              Todo List
+            </li></a>
+            <a href="#"><li class="flex items-center hover:text-black">
+              <img src={iconCalendar.src} alt="Calendar" class="mr-2" />
+              Calendar
+            </li></a>
+            <a href="#"><li class="flex items-center hover:text-black">
+              <img src={iconReminders.src} alt="Reminders" class="mr-2" />
+              Reminders
+            </li></a>
+            <a href="#"><li class="flex items-center hover:text-black">
+              <img src={iconPlanning.src} alt="Planning" class="mr-2" />
+              Planning
+            </li></a>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="flex items-center justify-between">
+            <a href="#" class="inline-block hover:text-black">
+                <span>Company</span>
+                <img src={arrowDown.src} alt="Arrow" class="transform group-hover:rotate-180 inline-block" />
+            </a>
+          </div>
+          <ul class="mt-2 space-y-2 pl-4 hidden group-hover:block">
+            <a href="#" class="hover:text-black"><li>History</li></a>
+            <a href="#" class="hover:text-black"><li>Our Team</li></a>
+            <a href="#" class="hover:text-black"><li>Blog</li></a>
+          </ul>
+        </li>
+        <a href="#" class="hover:text-black"><li>Careers</li></a>
+        <a href="#" class="hover:text-black"><li>About</li></a>
+      </ul>
+      <div class="flex flex-col p-6 space-y-4">
+        <button class="hover:text-black">Login</button>
+        <button class="border-2 border-stone-500 rounded-2xl py-2 hover:border-black hover:text-black">Register</button>
+      </div>
+    </div>
+  </nav>
+  
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const closeMenuButton = document.getElementById('closeMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('overlay');
+  
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('translate-x-full');
+      overlay.classList.remove('hidden');
+    });
+  
+    closeMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.add('translate-x-full');
+      overlay.classList.add('hidden');
+    });
+
+    overlay.addEventListener('click', () => {
+    mobileMenu.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+    });
+  </script>
