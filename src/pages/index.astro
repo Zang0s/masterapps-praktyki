@@ -1,12 +1,18 @@
 ---
 import Navbar from '../components/Navbar.astro';
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Graphics from '../components/Graphics.astro';
 ---
 
 <Layout title="Welcome to snap!">
 	<Navbar />
-	<main>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quia maxime unde. Deleniti accusamus eos veniam eveniet facere odit fugiat amet voluptas ipsam! Dignissimos odit molestiae deleniti qui veniam eum.
-	</main>
+	<div class="items-center flex space-x-8 h-3/4 relative">
+		<div class="basis-1/12"></div>
+		<Hero />
+		<div class="basis-1/12"></div>
+		<Graphics />
+		<div class="basis-1/12"></div>
+	</div>
 </Layout>
 
