@@ -1,10 +1,12 @@
+import arrowDwonIcon from '../../public/images/icon-arrow-down.svg'
+
 export default function DropdownMenu({ title, items}) {
     return (
       <div className="relative inline-block text-left group">
         <button className="flex items-center hover:text-black">
           {title}
           <img
-            src="/../../public/images/icon-arrow-down.svg"
+            src={arrowDwonIcon.src}
             alt="Arrow"
             className="h-2 w-3 ml-2 transition-transform transform group-hover:rotate-180"
           />
