@@ -4,7 +4,7 @@ export default function DropdownMenu({ title, items}) {
         <button className="flex items-center hover:text-black">
           {title}
           <img
-            src="/images/icon-arrow-down.svg"
+            src="../../public/images/icon-arrow-down.svg"
             alt="Arrow"
             className="h-2 w-3 ml-2 transition-transform transform group-hover:rotate-180"
           />
